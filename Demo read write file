@@ -1,0 +1,13 @@
+import os
+# Mở tập tin với tùy chọn thích hợp để tạo mới
+f = open("demo.txt", "a")
+# Ghi nội dung vào tập tin
+str = "Lap trinh Python (IPPA23327)"
+f.write(str)
+f.close()
+# Mở và đọc nội dung tập tin
+f = open("demo.txt", "r")
+print(f.read())
+f.close()
+# Xóa tập tin demo.txt
+os.remove("demo.txt")
