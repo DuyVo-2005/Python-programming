@@ -1,0 +1,19 @@
+class Student:
+    def __init__(self):
+        self.id = "None"
+        self.name = "None"
+        self.yearOfBirth = 0
+        self, subjectList = []
+    def inputStudent(self):
+        self. id = input("Số CMND hoặc số Căn cước hoặc mã số giấy khai sinh: ")
+        
+class SubjectInfo:
+    def __init__(self):
+        self.subjectId = "None"
+        self.subjectName = "None"
+        self.numberOfLessons= 0
+   def inputSubject(self):
+        self.subjectId = intput("Nhap ma mon hoc: ")
+        self.subjectName = input("Nhap ten mon hoc: ")
+        self.numberOfLessons= int(input("Nhap so tiet: "))
+        
