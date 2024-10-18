@@ -1,47 +1,85 @@
 import math as m
+
+
 class Point:
-    def __init__(self,x_coordinate,y_coordinate,color):
+    def __init__(self, x_coordinate, y_coordinate, color):
         self.x_coordinate = x_coordinate
         self.y_coordinate = y_coordinate
-        self.color = color;
+        self.color = color
+
     @property
     def x_coordinate(self):
         return self._x_coordinate
+
     @x_coordinate.setter
-    def x_coordinate(self,value):
+    def x_coordinate(self, value):
         self._x_coordinate = value
+
     @property
     def y_coordinate(self):
         return self._y_coordinate
+
     @y_coordinate.setter
-    def y_coordinate(self,value):
+    def y_coordinate(self, value):
         self._y_coordinate = value
+
     @property
     def color(self):
         return self._color
+
     @color.setter
-    def color(self,value):
+    def color(self, value):
         self._color = value
+
     def PrintInfo(self):
-       print(f"Toa do x: {self.x_coordinate}")
-       print(f"Toa do y: {self.y_coordinate}")
-       print(f"Mau sac: {self.color}")
-    def TinhTien(self, x_coordinate):
-        #theo truc hoanh
-        self.x_coordinate += x_coordinate
-    def TinhTien(self,x_coordinate,y_coordinate):
+        print(f"Toa do x: {self.x_coordinate}")
+        print(f"Toa do y: {self.y_coordinate}")
+        print(f"Mau sac: {self.color}")
+
+    def TinhTien(self, x_coordinate, y_coordinate=0):
         self.x_coordinate += x_coordinate
         self.y_coordinate += y_coordinate
-    def KhoangCach(self):
+        return Point(self.x_coordinate, self.y_coordinate, "None")
+
+    def KhoangCach(self, other=None):
         # so goc toa do
-        return round(m.sqrt(self.x_coordinate**2 + self.y_coordinate**2),3)
-    def KhoangCachSoDiem(self, other):
-        # do khong nap chong ham duoc
-        # so goc toa do
-        return round(m.sqrt((self.x_coordinate - other.x_coordinate)**2 + (self.y_coordinate - other.y_coordinate)**2),3)
-a = Point(1,2,"Red")
+        if other == None:
+            return round(m.sqrt(self.x_coordinate**2 + self.y_coordinate**2), 3)
+        else:
+            # so mot diem khac
+            return round(
+                m.sqrt(
+                    (self.x_coordinate - other.x_coordinate) ** 2
+                    + (self.y_coordinate - other.y_coordinate) ** 2
+                ),
+                3,
+            )
+
+    # def KhoangCach(self):
+    #     # so goc toa do
+    #     return round(m.sqrt(self.x_coordinate**2 + self.y_coordinate**2), 3)
+
+    # def KhoangCachSoDiem(self, other):
+    #     # do khong nap chong ham duoc
+    #     # so mot diem khac
+    #     return round(
+    #         m.sqrt(
+    #             (self.x_coordinate - other.x_coordinate) ** 2
+    #             + (self.y_coordinate - other.y_coordinate) ** 2
+    #         ),
+    #         3,
+    #     )
+    def __str__(self):
+        return f"Toa do x: {self.x_coordinate} | Toa do y: {self.y_coordinate} | Mau: {self.color}"
+
+
+a = Point(1, 2, "Red")
 print("Thong tin cua diem a: ")
 a.PrintInfo()
+print(f"a khi tien tien qua x = -6: ")
+print(a.TinhTien(-6))
+print(f"a khi tinh tien qua (-5; -5): ")
+print(a.TinhTien(-5, -5))
 print(f"Khoang cach cua a so voi goc toa do: {a.KhoangCach()}")
-b = Point(3,4,"Blue")
-print(f"Khoang cach diem a so voi diem b: {a.KhoangCachSoDiem(b)}")
+b = Point(3, 4, "Blue")
+print(f"Khoang cach diem a so voi diem b: {a.KhoangCach(b)}")
