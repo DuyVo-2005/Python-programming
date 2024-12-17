@@ -6,7 +6,13 @@ class Point:
         x = self.x - other.x
         y = self.y - other.y
         return Point(x,y)
+    def __add__(self, other):
+        x = self.x + other.x
+        y = self.y + other.y
+        return Point(x,y)
 p1 = Point(3, 4)
 p2 = Point(1, 2)
-result = p1-p2
+result = p1 - p2
+print(result.x, result.y)
+result = p1 + p2
 print(result.x, result.y)
