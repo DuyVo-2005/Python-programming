@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<employees>
+
+<employee>
+
+<id>1</id>
+
+<name>Trần Duy Thanh</name>
+
+</employee>
+
+<employee>
+
+<id>2</id>
+
+<name>Lê Hoành Sử</name>
+
+</employee>
+
+<employee>
+
+<id>3</id>
+
+<name>Hồ Trung Thành</name>
+
+</employee>
+
+</employees>
