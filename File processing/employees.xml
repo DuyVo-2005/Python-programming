@@ -2,28 +2,28 @@
 
 <employees>
 
-<employee>
+  <employee>
 
-<id>1</id>
+    <id>1</id>
 
-<name>Trần Duy Thanh</name>
+    <name>Trần Duy Thanh</name>
 
-</employee>
+  </employee>
 
-<employee>
+  <employee>
 
-<id>2</id>
+    <id>2</id>
 
-<name>Lê Hoành Sử</name>
+    <name>Lê Hoành Sử</name>
 
-</employee>
+  </employee>
 
-<employee>
+  <employee>
 
-<id>3</id>
+    <id>3</id>
 
-<name>Hồ Trung Thành</name>
+    <name>Hồ Trung Thành</name>
 
-</employee>
+  </employee>
 
 </employees>
