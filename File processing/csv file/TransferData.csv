@@ -1,0 +1,8 @@
+,Unnamed: 0.1,Unnamed: 0,ID,Amount,SourceAccountName,DesAccountName,Time,Note,Amount_type_str
+0,0,0,624582,80000,momo,sacombank,2024-12-04,,80000
+1,1,1,883355,25000,sacombank,momo,2024-12-04,,25000
+2,2,2,600232,3000,momo,sacombank,2024-12-04,,3000
+3,3,3,206457,6000,sacombank,momo,2024-12-04,,6000
+4,4,4,484975,2000,sacombank,momo,2024-12-05,chuyển tiển nha,2000
+5,5,5,376054,-2000,sacombank,momo,2024-12-05,chuyển tiển,-2000
+6,6,6,280593,4000,momo,sacombank,2024-12-05,,4000
